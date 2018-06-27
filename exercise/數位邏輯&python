@@ -1,0 +1,25 @@
+https://dxmahata.gitbooks.io/leetcode-python-solutions/content/
+配合學習python做的練習
+
+Calculate the sum of two integers a and b, but you are not allowed to use the
+operator + and -
+不能使用正負號來做出加減法  類似半加法器的練習
+if b == 0:
+return a
+sum = a ^ b
+carry = (a & b) << 1
+return self.getSum(sum, carry)
+
+Given an array of integers, every element appears twice except for one. Find that single one.
+輸出沒有重複的
+def singleNumber(self, nums):
+if len(nums) == 0:
+return None
+elif len(nums) == 1:
+return nums[0]
+else:
+xor_prod = 0
+for entries in nums:
+xor_prod ^= entries 
+return xor_prod
+
